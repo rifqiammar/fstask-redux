@@ -27,12 +27,15 @@
 
 3. Create Database: myblog
 
-   - npx sequelize db:create
+   npx sequelize db:create
 
 4. Create Migration dan models
 
-   - npx sequelize model:generate --name User --attributes username:string,password:string,nama:string,email:string,role:string
-   - npx sequelize model:generate --name Posts --attributes Userid:integer,posting_status:integer,title:string,content:TEXT
+   npx sequelize model:generate --name User --attributes username:string,password:string,nama:string,email:string,role:string
+   npx sequelize model:generate --name Posts --attributes UserId:integer,posting_status:integer,title:string,slug:string,content:TEXT
 
 5. Migrate dan membuat Table
-   - npx sequelize db:migrate
+   npx sequelize db:migrate
+
+**UNdo Migration**
+npx sequelize-cli db:migrate:undo
