@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const errorhandling = require("../helpers/errorhandling.js");
-const { User, Post } = require("../../models");
+const { User, Posts } = require("../../models");
 
 const getUsers = async (req, res) => {
   try {
@@ -15,7 +15,7 @@ const getUsers = async (req, res) => {
 const getUserPosts = async (req, res) => {
   try {
     const result = await User.findAll({
-      include: [Post],
+      include: [Posts],
     });
 
     res.status(200).json(errorhandling(200, "success", result));

@@ -4,9 +4,8 @@ const { User, Posts } = require("../../models");
 const getPosts = async (req, res) => {
   try {
     const result = await Posts.findAll();
-    console.log(result);
 
-    res.status(200).json(errorhandling(200, "success", "result"));
+    res.status(200).json(errorhandling(200, "success", result));
   } catch (error) {
     res.status(500).json(errorhandling(500, error.message));
   }
