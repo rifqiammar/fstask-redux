@@ -1,3 +1,3 @@
-export default function errorhandling(code, message, data = "") {
-  return { data, code, message };
-}
+module.exports = function errorhandling(status, message, data = "") {
+  return { data, status, message };
+};
