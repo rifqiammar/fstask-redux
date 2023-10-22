@@ -23,7 +23,7 @@ const login = async (req, res) => {
 
     const token = jwt.sign({ nama: usr.nama, createdat: usr.createdat }, secret_key, { expiresIn: "1d" });
 
-    res.status(200).json(errorhandling(200, "Selamat Anda Berhasil Login", { token }));
+    res.status(200).json(errorhandling(200, "Selamat Anda Berhasil Login", { token, usrId: usr.id }));
   } catch (error) {
     res.status(400).json(errorhandling(400, error.message));
   }
@@ -35,7 +35,7 @@ const cekToken = (req, res, next) => {
     const { authorization } = req.headers;
 
     if (!authorization) {
-      throw new Error("Authorization Gagal");
+      throw new Error("Gagal");
     }
 
     jwt.verify(authorization, secret_key);

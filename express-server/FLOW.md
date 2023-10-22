@@ -21,7 +21,7 @@
 
 1. initialisasi awal
 
-   - npx sequelize init
+   npx sequelize init
 
 2. setting config.json
 
