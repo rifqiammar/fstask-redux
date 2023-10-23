@@ -1,5 +1,5 @@
 import React from "react";
-import { GrLogin } from "react-icons/gr";
+import { GrLogin, GrLogout } from "react-icons/gr";
 
 const Navbar = () => {
   return (
@@ -30,6 +30,9 @@ const Navbar = () => {
           </div>
           <a className="navbar-brand" href="/login">
             <GrLogin /> Login
+          </a>
+          <a className="navbar-brand" href="/logout">
+            <GrLogout /> Logout
           </a>
         </div>
       </nav>
