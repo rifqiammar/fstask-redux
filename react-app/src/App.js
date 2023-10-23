@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
-import { About, Home, Login, Posting, Logout } from "./components";
+import { About, Home, Login, Posting, Logout, Contact } from "./components";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login page="login" xPage="register" />} />
           <Route path="/register" element={<Login page="register" xPage="login" />} />
+          <Route path="/contact" element={<Contact />} />
 
           <Route path="/posting" element={<Posting />} />
           <Route path="/logout" element={<Logout />} />
